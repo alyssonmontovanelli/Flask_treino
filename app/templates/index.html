@@ -1,0 +1,10 @@
+ {% extends 'base.html' %}
+
+ <!-- Dizendo onde o conteudo será substituido -->
+ {% block conteudo %}
+ <h2>Olá Alysson - {{ nome }}</h2>
+ <P>
+  <br>Profissão: {{dados.profissao}}<br/>
+  <br>Salário: {{dados.salario}}<br/>
+ </P>
+ {% endblock %}
