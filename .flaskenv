@@ -1,2 +1,1 @@
 FLASK_APP=Flask_treino.py
-FLASK_ENV=development
