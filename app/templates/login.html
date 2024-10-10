@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+<!-- Dizendo onde o conteudo será substituido -->
+{% block conteudo %}
+
+<!-- Para retornar a msg do flas
+ set (escopo global)
+ with (escopo local) -->
+ {% set mensagens = get_flashed_messages() %}
+ {% if mensagens %}
+  <div>
+   {% for msg in mensagens %}
+    {{ msg }}
+   {% endfor %}
+  </div>
+ {% endif %}
+
+ <form action="/autenticar", method="post">
+  Usuario: <input type="text" name="usuario"><br>
+  Texto: <Textarea name="texto"></Textarea><br>
+  Senha: <input type="text" name="senha">
+  <button type="submit">Enviar</button>
+
+<!-- Método padrão de envio é o método get -->
+ </form>
+
+
+
+{% endblock %}
